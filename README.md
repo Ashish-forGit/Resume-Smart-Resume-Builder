@@ -40,7 +40,7 @@ Experience the ease of creating and analyzing resumes:
 ![Screenshot 2](https://play-lh.googleusercontent.com/422QvDYY4ZDo00A-4EQTlnOVFw0SMHbSYo-YArdsuzEq9qGGRa3trk4z2lL3vcHUq5c=w1052-h592-rw)
 
 ## 📧 Contact
-For feedback or support, reach out at: `ashish93343@example.com`
+For feedback or support, reach out at: `ashish93343@gmail.com`
 
 ---
 
