@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
+    android:padding="16dp">
+
+    <!-- AppBarLayout with padding to move it down from the status bar -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:paddingTop="10dp"
+    android:animateLayoutChanges="true">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:elevation="8dp"
+        android:background="@color/backgroundColor"
+        app:title="Analysis Result"
+        app:titleCentered="true"
+        app:titleTextAppearance="@style/TextAppearance.Material3.TitleLarge"
+        app:popupTheme="@style/ThemeOverlay.Material3.Dark.ActionBar" />
+</com.google.android.material.appbar.AppBarLayout>
+
+    <!-- NestedScrollView to allow scrolling of content -->
+<androidx.core.widget.NestedScrollView
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:clipToPadding="false"
+android:padding="16dp"
+app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<!-- Result Card -->
+<com.google.android.material.card.MaterialCardView
+    android:id="@+id/resultCard"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="16dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="8dp"
+    app:strokeColor="?attr/colorOnSurface"
+    app:strokeWidth="0.5dp">
+
+    <!-- Card Content -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="24dp"
+        android:gravity="center_vertical">
+
+        <!-- Title Text for AI Analysis -->
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:text="AI Analysis"
+            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+            android:textColor="?attr/colorPrimary" />
+
+        <!-- Analysis Result Text -->
+        <TextView
+            android:id="@+id/tvAnalysisResult"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lineSpacingMultiplier="1.5"
+            android:text="Result Loading..."
+            android:textIsSelectable="true"
+            android:textSize="16sp"
+            android:textColor="?attr/colorOnSurface" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
+
+</androidx.core.widget.NestedScrollView>
+
+    <!-- Progress Indicator -->
+<com.google.android.material.progressindicator.CircularProgressIndicator
+android:id="@+id/progressIndicator"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_gravity="center"
+android:indeterminate="true"
+android:visibility="gone"
+android:layout_marginTop="32dp" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
